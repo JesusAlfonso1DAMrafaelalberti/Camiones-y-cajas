@@ -34,7 +34,7 @@ class Camion:
         if self.peso_total() + caja.peso_kg <= self.capacidad_kg:
             self.cajas.append(caja)
         else:
-            print(f"⚠️ No se puede añadir la caja {caja.codigo}, supera la capacidad del camión.")
+            print(f"No se puede añadir la caja {caja.codigo}, supera la capacidad del camión.")
 
     def setVelocidad(self, nueva_velocidad):
         self.velocidad = nueva_velocidad
@@ -43,10 +43,10 @@ class Camion:
         if 1 <= nuevo_rumbo <= 359:
             self.rumbo = nuevo_rumbo
         else:
-            print("⚠️ Rumbo inválido. Debe estar entre 1 y 359 grados.")
+            print("Rumbo inválido. Debe estar entre 1 y 359 grados.")
 
     def claxon(self):
-        print("🚚 piiiiiii")
+        print("piiiiiii")
 
     def __str__(self):
         info_cajas = "\n".join(str(caja) for caja in self.cajas)
